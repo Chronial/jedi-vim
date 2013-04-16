@@ -131,7 +131,8 @@ def goto(is_definition=False, is_related_name=False, no_output=False):
                 else:
                     echo_highlight("Builtin modules cannot be displayed.")
             else:
-                if d.module_path != vim.current.buffer.name:
+                if d.module_path.replace("\\", '/') != \
+                   vim.current.buffer.name.replace("\\", '/'):
                     vim.eval('jedi#new_buffer(%s)' % \
                                         repr(PythonToVimStr(d.module_path)))
                 vim.current.window.cursor = d.line_nr, d.column
