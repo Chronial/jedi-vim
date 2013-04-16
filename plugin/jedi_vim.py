@@ -136,7 +136,7 @@ def goto(is_definition=False, is_related_name=False, no_output=False):
                     vim.eval('jedi#new_buffer(%s)' % \
                                         repr(PythonToVimStr(d.module_path)))
                 vim.current.window.cursor = d.line_nr, d.column
-                vim.command('normal! zt')  # cursor at top of screen
+                #vim.command('normal! zt')  # cursor at top of screen
         else:
             # multiple solutions
             lst = []
