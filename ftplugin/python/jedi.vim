@@ -18,7 +18,7 @@ if g:jedi#auto_initialization
     execute "inoremap <buffer>".g:jedi#autocompletion_command." <C-X><C-O>"
 
     " goto / get_definition / related_names
-    execute "noremap <buffer>".g:jedi#goto_command." :call jedi#goto()<CR>"
+    execute "noremap <buffer>".g:jedi#goto_command." :call jedi#goto()<CR>zv"
     execute "noremap <buffer>".g:jedi#get_definition_command." :call jedi#get_definition()<CR>"
     execute "noremap <buffer>".g:jedi#related_names_command." :call jedi#related_names()<CR>"
     " rename
